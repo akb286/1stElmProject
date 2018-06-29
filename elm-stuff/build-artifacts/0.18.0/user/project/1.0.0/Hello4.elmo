@@ -1,0 +1,62 @@
+var _user$project$Hello4$myStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'fontSize', _1: '10em'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'color', _1: 'teal'},
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Hello4$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				text: A2(_elm_lang$core$Basics_ops['++'], model.text, '!')
+			});
+	});
+var _user$project$Hello4$model = {text: 'Hello World'};
+var _user$project$Hello4$Model = function (a) {
+	return {text: a};
+};
+var _user$project$Hello4$Text = {ctor: 'Text'};
+var _user$project$Hello4$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _user$project$Hello4$myStyle,
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(model.text),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$button,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onClick(_user$project$Hello4$Text),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('Add exclamation mark'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Hello4$main = _elm_lang$html$Html$beginnerProgram(
+	{model: _user$project$Hello4$model, view: _user$project$Hello4$view, update: _user$project$Hello4$update})();
