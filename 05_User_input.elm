@@ -30,7 +30,7 @@ update msg model =
 
 
 
-{--
+
 bigText : Attribute msg
 bigText =
     style
@@ -49,7 +49,7 @@ checkTextSize str =
         bigText
     else
         smallText
---}
+
 
 
 adjustSize : Model -> Attribute msg
@@ -57,9 +57,9 @@ adjustSize { text } =
     let
         ( size, color ) =
             if String.length text < 8 then
-                ( "20em", "goldenrod" )
+                ( "20em", "plum" )
             else
-                ( "10em", "seashell" )
+                ( "10em", "blue" )
     in
         style
             [ ( "fontSize", size )

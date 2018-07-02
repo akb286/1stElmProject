@@ -2,7 +2,7 @@ var _user$project$UserInput$adjustSize = function (_p0) {
 	var _p1 = _p0;
 	var _p2 = (_elm_lang$core$Native_Utils.cmp(
 		_elm_lang$core$String$length(_p1.text),
-		8) < 0) ? {ctor: '_Tuple2', _0: '20em', _1: 'goldenrod'} : {ctor: '_Tuple2', _0: '10em', _1: 'seashell'};
+		8) < 0) ? {ctor: '_Tuple2', _0: '20em', _1: 'plum'} : {ctor: '_Tuple2', _0: '10em', _1: 'blue'};
 	var size = _p2._0;
 	var color = _p2._1;
 	return _elm_lang$html$Html_Attributes$style(
@@ -19,6 +19,31 @@ var _user$project$UserInput$adjustSize = function (_p0) {
 				}
 			}
 		});
+};
+var _user$project$UserInput$smallText = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'fontSize', _1: '10em'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'color', _1: 'indianred'},
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$UserInput$bigText = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'fontSize', _1: '20em'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'color', _1: 'sandybrown'},
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$UserInput$checkTextSize = function (str) {
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$String$length(str),
+		8) < 0) ? _user$project$UserInput$bigText : _user$project$UserInput$smallText;
 };
 var _user$project$UserInput$update = F2(
 	function (msg, model) {
